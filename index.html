@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fliclock</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="flip-clock">
+    <div class="flip" id="hours">
+      <div class="flip-inner">
+        <div class="flip-top"></div>
+        <div class="flip-bottom"></div>
+        <span class="flip-text">00</span>
+        <div class="flip-line"></div>
+      </div>
+    </div>
+    <div class="flip" id="minutes">
+      <div class="flip-inner">
+        <div class="flip-top"></div>
+        <div class="flip-bottom"></div>
+        <span class="flip-text">00</span>
+        <div class="flip-line"></div>
+      </div>
+    </div>
+    <div class="flip" id="seconds">
+      <div class="flip-inner">
+        <div class="flip-top"></div>
+        <div class="flip-bottom"></div>
+        <span class="flip-text">00</span>
+        <div class="flip-line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="input-group">
+      <label for="input-hours">Hours:</label>
+      <input type="number" id="input-hours" placeholder="0">
+    </div>
+    <div class="input-group">
+      <label for="input-minutes">Minutes:</label>
+      <input type="number" id="input-minutes" placeholder="0">
+    </div>
+    <div class="input-group">
+      <label for="input-seconds">Seconds:</label>
+      <input type="number" id="input-seconds" placeholder="0">
+    </div>
+    <button onclick="confirmCountdown()">Start Countdown</button>
+    <br>
+    <button onclick="resetClock()">Reset</button>
+  </div>
+  <audio id="countdown-end-sound" src="alarm.mp3"></audio>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
